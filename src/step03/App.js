@@ -11,12 +11,12 @@ function App() {
 
   useEffect(
     ()=>{
-      // counter 1씩 증가
       function IncreaseCounter(){
+        // _counter 1씩 증가
         let _counter = loadCounter;
         _counter = _counter + 1;
         
-        // _counter 값이 10 이상이면 loading 종료, _counter 종료
+        // _counter 값이 10 초과면 loading 종료, _counter 종료
         if(_counter > 10){
           setIsLoading(false);
           clearInterval(loadTimer);
