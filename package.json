@@ -1,5 +1,6 @@
 {
   "name": "src",
+  "homepage": "https://jammomu.github.io/React_movie/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
