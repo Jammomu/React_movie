@@ -18,7 +18,7 @@ export function Detail(){
     try{
       console.log('fetchMovis');
       // 비동기 호출 => await 사용
-      const response = await axios.get(`https://yts-proxy.now.sh/list_movies.json?movie_id${id}`);
+      const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`);
       console.log(response); // 위의 호출보다 현재 콘솔로그가 실행이 빠름
       setInfo(response.data.data.movie);
       setIsLoading(false);
@@ -49,7 +49,7 @@ export function Detail(){
         </div>
       ) : (
         <>
-        <img src={info.medium_cover_image} alt="" />
+        <img src={info.medium_cover_image} />
         <h2>{info.title}({info.year})</h2>
         <p>{info.description_full}</p>
         <ul>
